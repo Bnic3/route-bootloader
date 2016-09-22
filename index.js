@@ -2,11 +2,13 @@
  * Created by john.nana on 9/22/2016.
  */
 
-var fs = require("fs");
-var path = require("path");
-var _ = require("lodash");
 
-var readDir = function (routerPath, modelPath, app) {
+
+var readDir = (function (routerPath, modelPath, app) {
+    var fs = require("fs"),
+    path = require("path"),
+     _ = require("lodash");
+
     /*
      *
      * Based on filenames, get existing route-level middlewares and dynamically load it
@@ -27,8 +29,6 @@ var readDir = function (routerPath, modelPath, app) {
 
 
     /*
-     *
-     *
      * Load models too
      *
      * */
@@ -41,6 +41,6 @@ var readDir = function (routerPath, modelPath, app) {
             }
         })
     }
-}
+})();
 
 module.exports = readDir.bind(null, "routes", "models");
