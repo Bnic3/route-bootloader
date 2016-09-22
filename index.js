@@ -4,7 +4,7 @@
 
 
 
-var readDir = (function (routerPath, modelPath, app) {
+var readDir = function (routerPath, modelPath, app) {
     var fs = require("fs"),
     path = require("path"),
      _ = require("lodash");
@@ -18,7 +18,7 @@ var readDir = (function (routerPath, modelPath, app) {
         fs.readdirSync(routerPath).forEach(function (file) {
             var filePath = path.join(routerPath, file);
             if (filePath.match(/\.js$/)) {
-                var route = require("../" + filePath);
+                var route = require("../../" + filePath);
                 app.use(route);
             }
             if (fs.lstatSync(filePath).isDirectory()) {
@@ -37,10 +37,10 @@ var readDir = (function (routerPath, modelPath, app) {
         fs.readdirSync(modelPath).forEach(function (file) {
             var filePath = path.join(modelPath, file);
             if (filePath.match(/\.js$/)) {
-                require("../" + filePath);
+                require("../../" + filePath);
             }
         })
     }
-})();
+}
 
 module.exports = readDir.bind(null, "routes", "models");
