@@ -1,0 +1,28 @@
+{
+  "name": "route-bootloader",
+  "version": "1.0.0",
+  "description": "Dynamically loads route-level middlewares into a node application ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bnic3/route-bootloader.git"
+  },
+  "keywords": [
+    "express",
+    "route",
+    "bootloader",
+    "model-loader"
+  ],
+  "author": "Bnic3",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bnic3/route-bootloader/issues"
+  },
+  "homepage": "https://github.com/Bnic3/route-bootloader#readme",
+  "dependencies": {
+    "lodash": "^4.16.1"
+  }
+}
