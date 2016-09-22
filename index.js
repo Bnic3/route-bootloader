@@ -26,6 +26,21 @@ var readDir = function (routerPath, modelPath, app) {
     }
 
 
+    /*
+     *
+     *
+     * Load models too
+     *
+     * */
+
+    if (fs.existsSync(modelPath)) {
+        fs.readdirSync(modelPath).forEach(function (file) {
+            var filePath = path.join(modelPath, file);
+            if (filePath.match(/\.js$/)) {
+                require("../" + filePath);
+            }
+        })
+    }
 }
 
 module.exports = readDir.bind(null, "routes", "models");
