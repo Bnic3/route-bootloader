@@ -1,6 +1,6 @@
 {
   "name": "route-bootloader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Dynamically loads route-level middlewares into a node application ",
   "main": "index.js",
   "scripts": {

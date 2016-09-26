@@ -3,7 +3,7 @@ Dynamically loads route-level middlewares into a node application
 
 ##Installation
 
-$ npm install -g route-bootloader
+$ npm install  route-bootloader --save
 
 ## Instructions
 create folders called "models" and "routes" to house all  models and api routes/controllers respectively
